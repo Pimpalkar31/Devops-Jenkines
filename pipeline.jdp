@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage{
+            steps(SCM){
+
+            }
+        }
+        stage{
+            steps(Biuld){
+                echo "Bulid Sucess Send to Test Stage"
+            }
+        }
+        stage{
+            steps(Test){
+               echo "Test OK Send To Deploy Deploy"
+            }
+        }
+        stage{
+            steps(Deploy){
+                echo "All Stages Pass OK Deployment sucess full"
+            }
+        }
+    }
+}
