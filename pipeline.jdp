@@ -2,22 +2,22 @@ pipeline{
     agent any
     stages{
         stage{
-            steps(SCM){
+            steps('SCM'){
 git'https://github.com/Pimpalkar31/Devops-Jenkines.git'
             }
         }
         stage{
-            steps(Biuld){
+            steps('Biuld'){
                 echo 'Bulid Sucess Send to Test Stage'
             }
         }
         stage{
-            steps(Test){
+            steps('Test'){
                echo 'Test OK Send To Deploy Deploy'
             }
         }
         stage{
-            steps(Deploy){
+            steps('Deploy'){
                 echo 'All Stages Pass OK Deployment sucess full'
             }
         }
