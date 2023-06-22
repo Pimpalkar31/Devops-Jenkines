@@ -3,22 +3,22 @@ pipeline{
     stages{
         stage{
             steps(SCM){
-
+git'https://github.com/Pimpalkar31/Devops-Jenkines.git'
             }
         }
         stage{
             steps(Biuld){
-                echo "Bulid Sucess Send to Test Stage"
+                echo 'Bulid Sucess Send to Test Stage'
             }
         }
         stage{
             steps(Test){
-               echo "Test OK Send To Deploy Deploy"
+               echo 'Test OK Send To Deploy Deploy'
             }
         }
         stage{
             steps(Deploy){
-                echo "All Stages Pass OK Deployment sucess full"
+                echo 'All Stages Pass OK Deployment sucess full'
             }
         }
     }
