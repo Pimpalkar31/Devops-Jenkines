@@ -24,7 +24,7 @@ git'https://github.com/Pimpalkar31/Devops-Jenkines.git'
         }
 stage ('webhook') {
             steps {
-                echo 'All Stages Pass OK webhook conection sucess full'
+                echo 'All Stages webhook conection sucess full'
             }
         }
 
